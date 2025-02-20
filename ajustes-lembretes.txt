@@ -1,46 +1,10 @@
 ====== index.html ======
-1. JS para mudar o tema da página
-2. Menu lateral -> Menu sanduíche em telas compactas
-3. Ajuste de cores
-4. Elaborar textos
-
-====== curriculo.html ======
-
-
-
-
-
-====== contato.html ======
-
-
-
-
-
-====== projetos.html ======
-
-
-
-
-
-
-====== style.css ======
-
-
-
-
-
-
-====== script.js ======
-
-
-
-
-
-
-======= assets ======
-
-
-
+1. Section "Contato" está fazendo scrollar para o lado no mobile
+2. Reajustar nomes e comentários no código
+3. Construir textos
+4. Transição lenta até o alvo
+5. Adicionar favicon
+6. Nome do site 
 
 
 

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Silicon | About v.1</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo.svg" width="47" alt="Silicon">
+            Silicon
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#aboutMe" class="nav-link">Sobre mim</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#school" class="nav-link">Educação</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#certificates" class="nav-link">Account</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#experience" class="nav-link">Experiência</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link">contato</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
+                &nbsp;Buy now
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      
+      <!-- Hero -->
+      <section class="jarallax position-relative d-flex align-items-center min-vh-100 bg-light mb-5 py-lg-5 pt-5" style="background-image: url(assets/img/landing/digital-agency/hero-bg.svg);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
+        <div class="container position-relative zindex-5 py-5">
+          <div class="row justify-content-md-start justify-content-center">
+            <div class="col-md-6 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+              <div class="mb-md-5 pb-xl-5 mb-4">
+
+                <!-- Text -->
+                <h1 class="display-2 mb-md-5 mb-3 pb-3">
+                  We <span class="text-gradient-primary">Transform</span> Your Ideas into Reality
+                </h1>
+                <div class="d-md-flex align-items-md-start">
+                  <a href="#contact" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Fale comigo</a>
+                  <p class="d-lg-block d-none mb-0 ps-md-3">Silicon is a leading full-service digital agency based in New York. We make mobile apps,websites &amp; brands, that people appreciate all around the world.</p>
+                </div>
+              </div>
+
+              <!-- Scroll down btn -->
+              <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
+                <a href="#benefits" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3">
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <span class="fs-sm">Discover more</span>
+              </div>
+            </div>
+
+            <!-- Animated gfx -->
+            <div class="col-sm-6 col-sm-6 col-9 order-md-2 order-1">
+              <lottie-player class="mx-auto" src="assets/json/animation-digital-agency.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="container py-5" id="aboutMe">
+        <div class="row">
+          <div class="col-md-5 py-sm-2 py-lg-0">
+            <div class="card h-100 border-0 overflow-hidden px-md-4">
+              <span class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
+              <div class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
+                <h2 class="h1 text-center text-md-start p-lg-4">Quem sou eu?</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="card border-0 shadow-sm p-4 p-xxl-5">
+              <div class="d-flex justify-content-between pb-4 mb-2">
+                <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none">
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <div class="d-flex">
+                  <button type="button" id="testimonials-prev" class="btn btn-prev btn-icon btn-sm me-2">
+                    <i class="bx bx-chevron-left"></i>
+                  </button>
+                  <button type="button" id="testimonials-next" class="btn btn-next btn-icon btn-sm ms-2">
+                    <i class="bx bx-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+              
+              <!-- Slider -->
+              <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+                "spaceBetween": 24,
+                "loop": true,
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "clickable": true
+                },
+                "navigation": {
+                  "prevEl": "#testimonials-prev",
+                  "nextEl": "#testimonials-next"
+                }
+              }'>
+                <div class="swiper-wrapper">
+
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto">
+                    <figure class="card h-100 position-relative border-0 bg-transparent">
+                      <blockquote class="card-body p-0 mb-0">
+                        <p class="fs-lg mb-0">Mi semper risus ultricies orci pulvinar in at enim orci. Quis facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu sapien, senectus libero, amet dapibus cursus quam. Eget pellentesque eu purus volutpat adipiscing malesuada. Purus nisi, tortor vel lacus.</p>
+                      </blockquote>
+                      <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                        <img src="./assets/img/personal/foto-formatura-menor.jpeg" width="60" class="rounded-circle" alt="Foto Guilherme Meneghini">
+                        <div class="ps-3">
+                          <h6 class="fw-semibold lh-base mb-0">Guilherme Meneghini</h6>
+                          <span class="fs-sm text-muted">Desenvolvedor Full Stack</span>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto">
+                    <figure class="card h-100 position-relative border-0 bg-transparent">
+                      <blockquote class="card-body p-0 mb-0">
+                        <p class="fs-lg mb-0">Vestibulum nunc lectus auctor quis. Natoque lectus tortor lacus, eu. Nunc feugiat nisl maecenas nulla hac morbi. Vitae, donec facilisis sed nunc netus. Venenatis posuere faucibus enim est. Vel dignissim morbi blandit morbi tellus. Arcu ullamcorper quis enim.</p>
+                      </blockquote>
+                      <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                        <img src="./assets/img/personal/foto-formatura-menor.jpeg" width="60" class="rounded-circle" alt="Foto Guilherme Meneghini">
+                        <div class="ps-3">
+                          <h6 class="fw-semibold lh-base mb-0">Guilherme Meneghini</h6>
+                          <span class="fs-sm text-muted">Desenvolvedor Full Stack</span>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto">
+                    <figure class="card h-100 position-relative border-0 bg-transparent">
+                      <blockquote class="card-body p-0 mb-0">
+                        <p class="fs-lg mb-0">Ac at sed sit senectus massa. Massa ante amet ultrices magna porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim, vel enim egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam pellentesque sed aliquet integer massa. Orci leo tortor ornare.</p>
+                      </blockquote>
+                      <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                        <img src="./assets/img/personal/foto-formatura-menor.jpeg" width="60" class="rounded-circle" alt="Foto Guilherme Meneghini">
+                        <div class="ps-3">
+                          <h6 class="fw-semibold lh-base mb-0">Guilherme Meneghini</h6>
+                          <span class="fs-sm text-muted">Desenvolvedor Full Stack</span>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <!-- Pagination (bullets) -->
+                <div class="swiper-pagination position-relative mt-5"></div>
+              </div>        
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Benefits (features) -->
+      <section class="container mt-3 mb-5 pt-lg-5" id="school">
+        <div class="swiper pt-3" data-swiper-options='{
+          "slidesPerView": 1,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "991": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper pt-4">
+
+            <!-- Item -->
+            <div class="swiper-slide border-end-lg px-2">
+              <div class="text-center">
+                <img src="assets/img/landing/digital-agency/icons/idea.svg" width="48" alt="Bulb icon" class="d-block mb-4 mx-auto">
+                <h4 class="mb-2 pb-1">Colégio Militar de Belo horizonte (2020-2022)</h4>
+                <p class="mx-auto" style="max-width: 336px;">Disciplina, liderança, respeito à hierarquia, trabalho em equipe e responsabilidade</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide border-end-lg px-2">
+              <div class="text-center">
+                <img src="assets/img/landing/digital-agency/icons/award.svg" width="48" alt="Award icon" class="d-block mb-4 mx-auto">
+                <h4 class="mb-2 pb-1">Engenharia de Computação<br>CEFET-MG (2023-2027)</h4>
+                <p class="mx-auto" style="max-width: 336px;">Pensamento lógico, resolução de problemas, inovação, adaptação a novas tecnologias, trabalho interdisciplinar e foco em resultados</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide px-2">
+              <div class="text-center">
+                <img src="assets/img/landing/digital-agency/icons/team.svg" width="48" alt="Team icon" class="d-block mb-4 mx-auto">
+                <h4 class="mb-2 pb-1">Tecnólogo em Gestão Financeira<br>Newton Paiva (2023-2024)</h4>
+                <p class="mx-auto" style="max-width: 336px;">Análise financeira, tomada de decisões, planejamento, gestão, liderança e visão crítica</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+        </div>
+      </section>     
+      
+      <!-- Awards -->
+      <section class="container mb-5 pb-3 pb-md-4 py-lg-5" id="certificates">
+        <div class="row gy-4 py-xl-2 align-items-center">
+          <div class="col-md-4">
+            <h2 class="mb-0 text-md-start text-center">Certificações</h2>
+          </div>
+          <div class="col-lg-7 offset-lg-1 col-md-8">
+            <div class="row row-cols-sm-4 row-cols-2 gy-4 align-items-center">
+              <div class="col">
+                <div class="position-relative text-center">
+                  <img src="./assets/img/personal/selo-AWS-cloudPractitioner.png" width="100" alt="Certificado AWS em nuvem" class="d-block mx-auto mb-3">
+                  <a href="#" class="text-body justify-content-center fs-sm stretched-link text-decoration-none">Formação em nuvem AWS</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="position-relative text-center">
+                  <img src="./assets/img/personal/Certificado_Santander_Coders.jpg" width="100" alt="Certificado Santander Coders" class="d-block mx-auto mb-3">
+                  <a href="#" class="text-body justify-content-center fs-sm stretched-link text-decoration-none">Santander Corders Back-End</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="position-relative text-center">
+                  <img src="./assets/img/personal/Certificado_Proz.jpg" width="100" alt="Certificado Proz" class="d-block mx-auto mb-3">
+                  <a href="#" class="text-body justify-content-center fs-sm stretched-link text-decoration-none">Certificado Proz Front-end</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="position-relative text-center">
+                  <img src="./assets/img/personal/certificado-profissional-de-analise-de-dados-do-google.png" width="100" alt="Certificado Google" class="d-block mx-auto mb-3">
+                  <a href="#" class="text-body justify-content-center fs-sm stretched-link text-decoration-none">Certificado Google Data Analytics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Informations -->
+      <section class="container pt-4 pb-5 pt-lg-5" id="experience">
+        <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">Mais Informações</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bx-lock fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Ação de Segurança da Informação</h3>
+                <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Estágio Safe Trace</h3>
+                <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Participação Empresa Júnior</h3>
+                <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <!--
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Touch-Enabled Sliders</h3>
+                <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+              </div>
+            </div>
+          </div>
+          -->
+
+          <!-- Item -->
+          <!--
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">W3C Valid HTML Code</h3>
+                <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+              </div>
+            </div>
+          </div>
+        -->
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Software de Gestão de Patentes</h3>
+                <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bxl-python text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Projeto Python para Todos</h3>
+                <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bx-book text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Professor Particular de Exatas</h3>
+                <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Social networks (Carousel on narrow screens) -->
+      <section class="container text-center py-5 my-2 my-md-4 m-lg-5" id="contact">
+        <h2 class="h1 mb-4">Minhas Redes Sociais</h2>
+        <p class="fs-lg text-muted pb-2 mb-5">Siga-me e entre em contato comigo!</p>
+      
+        <!-- Container para centralizar os itens -->
+        <div class="d-flex justify-content-center align-items-center">
+          <!-- Item 1 -->
+          <div class="position-relative text-center mx-4 px-lg-4">
+            <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-lg stretched-link">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <div class="pt-4">
+              <h6 class="mb-1">Linkedin</h6>
+              <p class="fs-sm text-muted mb-0">guilhermemeneghini</p>
+            </div>
+          </div>
+      
+          <!-- Linha Vertical -->
+          <div class="separator" style="width: 1px; height: 60px; background-color: #ccc;"></div>
+      
+          <!-- Item 2 -->
+          <div class="position-relative text-center mx-4 px-lg-4">
+            <a href="#" class="btn btn-icon btn-secondary btn-instagram btn-lg stretched-link">
+              <i class="bx bxl-github"></i>
+            </a>
+            <div class="pt-4">
+              <h6 class="mb-1">GitHub</h6>
+              <p class="fs-sm text-muted mb-0">guimeneghini</p>
+            </div>
+          </div>
+
+          <!-- Linha Vertical -->
+          <div class="separator" style="width: 1px; height: 60px; background-color: #ccc;"></div>
+      
+          <!-- Item 2 -->
+          <div class="position-relative text-center mx-4 px-lg-4">
+            <a href="#" class="btn btn-icon btn-secondary btn-instagram btn-lg stretched-link">
+              <i class="bx bx-envelope"></i>
+            </a>
+            <div class="pt-4">
+              <h6 class="mb-1">E-mail</h6>
+              <p class="fs-sm text-muted mb-0">guimeneghini10@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
