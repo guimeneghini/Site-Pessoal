@@ -1,0 +1,52 @@
+====== index.html ======
+1. JS para mudar o tema da página
+2. Menu lateral -> Menu sanduíche em telas compactas
+3. Ajuste de cores
+4. Elaborar textos
+
+====== curriculo.html ======
+
+
+
+
+
+====== contato.html ======
+
+
+
+
+
+====== projetos.html ======
+
+
+
+
+
+
+====== style.css ======
+
+
+
+
+
+
+====== script.js ======
+
+
+
+
+
+
+======= assets ======
+
+
+
+
+
+
+======= README.md ======
+
+
+
+
+
