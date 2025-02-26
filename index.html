@@ -2,25 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Guilherme Meneghini | Site Pessoal</title>
+    <title>Guilherme Meneghini | Portifólio</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
-    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
-    <meta name="author" content="Createx Studio">
+    <meta name="description" content="Site Pessoal - Um portfólio de desenvolvedor">
+    <meta name="keywords" content="dev, desenvolvedor, developer, java, C, C++, C#, html, html5, css, css3, JavaScript, bootstrap, SQL, banco de dados, database, banco de dados relacional, database relational, relational, relacional, guilherme, meneghini, guilherme meneghini, python, seo, portifolio, portfolio, pessoal, personal, site pessoal, personal site">
+    <meta name="author" content="Guilherme Meneghini">
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"> <!-- Gerar apple-touch-icon.png e mudar -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png"> <!-- Gerar favicon-32x32.png e mudar -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png"> <!-- Gerar favicon-16x16.png e mudar -->
+    <link rel="manifest" href="assets/favicon/site.webmanifest"> <!-- Gerar site.webmanifest e mudar -->
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1"> <!-- Gerar safari-pinned-tab.svg e mudar -->
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico"> <!-- Gerar afavicon.ico e mudar -->
+    <meta name="msapplication-TileColor" content="#080032"> 
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml"> <!-- Gerar mstile-150x150.png e mudar no browserconfig.xml -->
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
@@ -153,9 +153,9 @@
 
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky" id="top">
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
         <div class="container px-3">
-          <a href="#top" class="navbar-brand pe-3">
+          <a href="#top" class="navbar-brand pe-3" id="top">
             <!--<img src="assets/img/logo.svg" width="47" alt="Silicon">
             Silicon-->Início
           </a>
@@ -182,7 +182,13 @@
                   <a href="#contact" class="nav-link">Contato</a>
                 </li>
               </ul>
-            </div>     
+            </div>
+            <!--<div class="offcanvas-header border-top">
+              <button class="languageButton btn btn-primary w-100">
+                <i class="bx bx-globe fs-4 lh-1 me-1"></i>
+                &nbsp;In English
+              </button>
+            </div>-->  
           </div>
           <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
@@ -191,7 +197,11 @@
           </div>
           <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button><!--
+          <button class="languageButton btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+            <i class="bx bx-globe fs-5 lh-1 me-1"></i>
+            &nbsp;In English
+          </button>-->
         </div>
       </header>
 
@@ -237,7 +247,7 @@
       <!-- About Me -->
       <section class="container py-5" id="aboutMe">
         <div class="row">
-          <div class="col-md-5 py-sm-2 py-lg-0">
+          <div class="col-md-5 py-sm-5 py-lg-0">
             <div class="card h-100 border-0 overflow-hidden px-md-4">
               <span class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
               <div class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
@@ -422,9 +432,9 @@
         </div>
       </section>
 
-      <!-- More Informations -->
+      <!-- More Informations / Experience -->
       <section class="container pt-4 pb-5 pt-lg-5" id="experience">
-        <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">Mais Informações</h2>
+        <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">Experiência</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
 
           <!-- Item _ Safe Trace -->
@@ -584,7 +594,7 @@
                   <li> 
                     <p class="fs-sm mb-0">Lecionar Física, Química e Matemática para turmas de todas as séries, desenvolvendo uma abordagem integrada que conecta une diferentes disciplinas.</p> </li> 
                   <li> 
-                    <p class="fs-sm mb-0">Utilizar metódos de ensino interativas, estimulando a curiosidade e o pensamento crítico, com experimentos práticos e resolução de problemas.</p> 
+                    <p class="fs-sm mb-0">Utilizar metódos de ensino interativos, estimulando a curiosidade e o pensamento crítico, com experimentos práticos e resolução de problemas.</p> 
                   </li> 
                   <li> 
                     <p class="fs-sm mb-0">Identificar as necessidades de cada aluno, oferecendo apoio personalizado e criando um ambiente de aprendizagem inclusivo.</p> 
@@ -596,7 +606,7 @@
         </div>
       </section>
 
-      <!-- Social networks (Carousel on narrow screens) -->
+      <!-- Social networks -->
       <section class="container text-center py-5 my-2 my-md-4 my-lg-5" id="contact">
         <h2 class="h1 mb-4">Meus Contatos</h2>
         <p class="fs-lg text-muted pb-2 mb-5">Siga-me e entre em contato comigo!</p>
@@ -646,56 +656,58 @@
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
 
-    <!-- Slow movement link scripts -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const scrollLinks = document.querySelectorAll('a[href^="#"]'); // Seleciona todos os links com âncoras
+  </body>
 
-        scrollLinks.forEach(link => {
-          link.addEventListener("click", function (event) {
-            event.preventDefault();
+  <!-- Slow movement link scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollLinks = document.querySelectorAll('a[href^="#"]'); // Seleciona todos os links com âncoras
 
-            const targetId = this.getAttribute("href"); // Pega o ID do destino (#top, #section1, etc.)
-            const targetElement = document.querySelector(targetId); // Encontra o elemento correspondente
+      scrollLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
 
-            if (targetElement) {
-              let targetPosition = targetElement.offsetTop; // Pega a posição do elemento na página
-              let startPosition = window.scrollY;
-              let distance = targetPosition - startPosition;
-              let duration = 600; // Tempo da animação em milissegundos
-              let startTime = null;
+          const targetId = this.getAttribute("href"); // Pega o ID do destino (#top, #section1, etc.)
+          const targetElement = document.querySelector(targetId); // Encontra o elemento correspondente
 
-              function smoothScroll(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                let timeElapsed = currentTime - startTime;
-                let progress = Math.min(timeElapsed / duration, 1);
+          if (targetElement) {
+            let targetPosition = targetElement.offsetTop; // Pega a posição do elemento na página
+            let startPosition = window.scrollY;
+            let distance = targetPosition - startPosition;
+            let duration = 600; // Tempo da animação em milissegundos
+            let startTime = null;
 
-                window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
+            function smoothScroll(currentTime) {
+              if (startTime === null) startTime = currentTime;
+              let timeElapsed = currentTime - startTime;
+              let progress = Math.min(timeElapsed / duration, 1);
 
-                if (timeElapsed < duration) {
-                  requestAnimationFrame(smoothScroll);
-                }
+              window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
+
+              if (timeElapsed < duration) {
+                requestAnimationFrame(smoothScroll);
               }
-
-              function easeInOutQuad(t) {
-                return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-              }
-
-              requestAnimationFrame(smoothScroll);
             }
-          });
+
+            function easeInOutQuad(t) {
+              return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+            }
+
+            requestAnimationFrame(smoothScroll);
+          }
         });
       });
-    </script>
+    });
+  </script>
 
-    <!-- Vendor Scripts -->
-    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
-    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+  <!-- Vendor Scripts -->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+  <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
 
-    <!-- Main Theme Script -->
-    <script src="assets/js/theme.min.js"></script>
-  </body>
+  <!-- Main Theme Script -->
+  <script src="assets/js/theme.min.js"></script>
+
 </html>

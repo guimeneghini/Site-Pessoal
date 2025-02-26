@@ -1,7 +1,8 @@
 ====== index.html ======
-1. Reajustar nomes e comentários no código
-2. Construir textos
-3. Adicionar favicon e imagens
+1. Gerar favicons
+2. Adicionar imagens
+3. Testar Mudança de idioma do site
+4. Futuro espaço para "blog"
 
 
 ======= README.md ======
